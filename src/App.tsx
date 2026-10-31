@@ -285,6 +285,16 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white py-32">
+          {/* $20 Discount Banner */}
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full border-2 border-amber-400/50 mb-6 shadow-lg shadow-amber-500/30 animate-pulse">
+            <span className="text-white font-bold text-sm sm:text-base">
+              {lang === 'en' ? '🎉 New Client Special:' : '🎉 Акция для новых клиентов:'}
+            </span>
+            <span className="text-white font-bold text-sm sm:text-base bg-white/20 px-3 py-0.5 rounded-full">
+              {lang === 'en' ? '$20 OFF' : '-$20'}
+            </span>
+          </div>
+          
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
             <Shield className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium">{content?.heroBadge || t.hero.badge}</span>
@@ -314,6 +324,63 @@ function App() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-1.5">
             <div className="w-1.5 h-3 bg-white/70 rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* Home Spa Experience Section */}
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://image.qwenlm.ai/generated-images/d7b5f6be-f975-4c4a-91b6-26c937ecfced/_result.png"
+            alt="Home Spa Experience"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/50" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-700/90 backdrop-blur-sm rounded-full mb-6">
+              <span className="text-white text-sm font-semibold">
+                {lang === 'en' ? '✨ Premium Home Service' : '✨ Премиальный сервис на дому'}
+              </span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              {lang === 'en' 
+                ? 'Experience the ultimate relaxation without leaving your home.'
+                : 'Испытайте полное расслабление, не выходя из дома.'}
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-8">
+              {lang === 'en'
+                ? 'Our licensed massage therapist brings a full spa experience — professional table, premium oils, and expert technique — right to your doorstep.'
+                : 'Наш лицензированный массажист привезёт полный спа-опыт — профессиональный стол, премиальные масла и экспертную технику — прямо к вашей двери.'}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-2 text-white/80">
+                <div className="w-8 h-8 bg-amber-600/30 rounded-lg flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-amber-400" />
+                </div>
+                <span className="text-sm font-medium">
+                  {lang === 'en' ? 'Licensed Therapist' : 'Лицензированный терапевт'}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-white/80">
+                <div className="w-8 h-8 bg-amber-600/30 rounded-lg flex items-center justify-center">
+                  <Truck className="w-4 h-4 text-amber-400" />
+                </div>
+                <span className="text-sm font-medium">
+                  {lang === 'en' ? 'We Come to You' : 'Мы приезжаем к вам'}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-white/80">
+                <div className="w-8 h-8 bg-amber-600/30 rounded-lg flex items-center justify-center">
+                  <Droplets className="w-4 h-4 text-amber-400" />
+                </div>
+                <span className="text-sm font-medium">
+                  {lang === 'en' ? 'Premium Oils' : 'Премиальные масла'}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
