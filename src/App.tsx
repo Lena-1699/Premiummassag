@@ -18,6 +18,10 @@ import {
   ChevronLeft,
   ChevronRight,
   Check,
+  Instagram,
+  Facebook,
+  Youtube,
+  Twitter,
 } from 'lucide-react';
 
 // Default images from Unsplash
@@ -548,7 +552,57 @@ function App() {
                 </div>
                 <span className="font-serif text-xl font-semibold">Serenity</span>
               </div>
-              <p className="text-stone-400 text-sm leading-relaxed">{t.footer.tagline}</p>
+              <p className="text-stone-400 text-sm leading-relaxed mb-5">{t.footer.tagline}</p>
+              {/* Social Media Links */}
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://instagram.com/serenitymassageseattle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20"
+                >
+                  <Instagram className="w-4.5 h-4.5" />
+                </a>
+                <a
+                  href="https://facebook.com/serenitymassageseattle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
+                >
+                  <Facebook className="w-4.5 h-4.5" />
+                </a>
+                <a
+                  href="https://tiktok.com/@serenitymassageseattle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
+                >
+                  <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.88 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.3 0 .59.04.86.12V9.4a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3.15 15.7 6.34 6.34 0 0 0 9.49 22a6.34 6.34 0 0 0 6.34-6.34V9.05a8.27 8.27 0 0 0 4.85 1.56V7.17a4.85 4.85 0 0 1-1.09-.48z"/>
+                  </svg>
+                </a>
+                <a
+                  href="https://youtube.com/@serenitymassageseattle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-red-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/20"
+                >
+                  <Youtube className="w-4.5 h-4.5" />
+                </a>
+                <a
+                  href="https://twitter.com/serenitymasssea"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter / X"
+                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
+                >
+                  <Twitter className="w-4.5 h-4.5" />
+                </a>
+              </div>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">{t.nav.contact}</h4>
