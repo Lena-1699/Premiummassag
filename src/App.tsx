@@ -22,6 +22,8 @@ import {
   Facebook,
   Youtube,
   Twitter,
+  Linkedin,
+  Pin,
 } from 'lucide-react';
 
 // Default images from Unsplash
@@ -553,55 +555,118 @@ function App() {
                 <span className="font-serif text-xl font-semibold">Serenity</span>
               </div>
               <p className="text-stone-400 text-sm leading-relaxed mb-5">{t.footer.tagline}</p>
-              {/* Social Media Links */}
-              <div className="flex items-center gap-3">
-                <a
-                  href="https://instagram.com/serenitymassageseattle"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20"
-                >
-                  <Instagram className="w-4.5 h-4.5" />
-                </a>
-                <a
-                  href="https://facebook.com/serenitymassageseattle"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
-                >
-                  <Facebook className="w-4.5 h-4.5" />
-                </a>
-                <a
-                  href="https://tiktok.com/@serenitymassageseattle"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
-                >
-                  <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.88 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.3 0 .59.04.86.12V9.4a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3.15 15.7 6.34 6.34 0 0 0 9.49 22a6.34 6.34 0 0 0 6.34-6.34V9.05a8.27 8.27 0 0 0 4.85 1.56V7.17a4.85 4.85 0 0 1-1.09-.48z"/>
-                  </svg>
-                </a>
-                <a
-                  href="https://youtube.com/@serenitymassageseattle"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-red-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/20"
-                >
-                  <Youtube className="w-4.5 h-4.5" />
-                </a>
-                <a
-                  href="https://twitter.com/serenitymasssea"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter / X"
-                  className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
-                >
-                  <Twitter className="w-4.5 h-4.5" />
-                </a>
+              {/* Social Media Links — Popular in Seattle */}
+              <div>
+                <p className="text-stone-500 text-xs uppercase tracking-wider font-semibold mb-3">
+                  {lang === 'en' ? 'Follow Us' : 'Мы в соцсетях'}
+                </p>
+                <div className="flex flex-wrap items-center gap-2.5">
+                  {/* Instagram — #1 visual platform for wellness in Seattle */}
+                  <a
+                    href="https://instagram.com/serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    title="Instagram"
+                    className="group relative w-10 h-10 rounded-full bg-stone-800 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-500 hover:to-orange-400 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/30"
+                  >
+                    <Instagram className="w-[18px] h-[18px]" />
+                  </a>
+                  {/* Facebook — still huge in Seattle communities */}
+                  <a
+                    href="https://facebook.com/serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    title="Facebook"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/30"
+                  >
+                    <Facebook className="w-[18px] h-[18px]" />
+                  </a>
+                  {/* TikTok — fastest growing in Seattle wellness scene */}
+                  <a
+                    href="https://tiktok.com/@serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                    title="TikTok"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
+                  >
+                    <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.77 0 2.89 2.89 0 0 1 2.88-2.88c.3 0 .59.04.86.12V9.4a6.33 6.33 0 0 0-.86-.06A6.34 6.34 0 0 0 3.15 15.7 6.34 6.34 0 0 0 9.49 22a6.34 6.34 0 0 0 6.34-6.34V9.05a8.27 8.27 0 0 0 4.85 1.56V7.17a4.85 4.85 0 0 1-1.09-.48z"/>
+                    </svg>
+                  </a>
+                  {/* YouTube — Seattle's favorite video platform */}
+                  <a
+                    href="https://youtube.com/@serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    title="YouTube"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-red-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-500/30"
+                  >
+                    <Youtube className="w-[18px] h-[18px]" />
+                  </a>
+                  {/* Pinterest — very popular in Seattle for wellness & self-care */}
+                  <a
+                    href="https://pinterest.com/serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Pinterest"
+                    title="Pinterest"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-red-700 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-red-600/30"
+                  >
+                    <Pin className="w-[18px] h-[18px]" />
+                  </a>
+                  {/* Nextdoor — #1 hyperlocal network, essential for Seattle home services */}
+                  <a
+                    href="https://nextdoor.com/login/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Nextdoor"
+                    title="Nextdoor"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-emerald-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/30"
+                  >
+                    <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                    </svg>
+                  </a>
+                  {/* LinkedIn — Seattle is a tech hub (Amazon, Microsoft) */}
+                  <a
+                    href="https://linkedin.com/company/serenitymassageseattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-700 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-600/30"
+                  >
+                    <Linkedin className="w-[18px] h-[18px]" />
+                  </a>
+                  {/* Reddit — r/Seattle is one of the most active city subreddits */}
+                  <a
+                    href="https://reddit.com/r/Seattle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Reddit"
+                    title="Reddit"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-orange-600 flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30"
+                  >
+                    <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.558c.155 0 .308.061.42.173a.615.615 0 0 1 0 .862c-.731.73-2.247.884-3.015.116a.615.615 0 0 1 0-.862.615.615 0 0 1 .862 0c.308.308 1.234.215 1.733-.287zm7.466 0c.499.502 1.425.595 1.733.287a.615.615 0 0 1 .862 0 .615.615 0 0 1 0 .862c-.768.768-2.284.614-3.015-.116a.615.615 0 0 1 0-.862.615.615 0 0 1 .42-.171z"/>
+                    </svg>
+                  </a>
+                  {/* X (Twitter) — popular among Seattle tech professionals */}
+                  <a
+                    href="https://x.com/serenitymasssea"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X (Twitter)"
+                    title="X (Twitter)"
+                    className="w-10 h-10 rounded-full bg-stone-800 hover:bg-black flex items-center justify-center text-stone-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/10"
+                  >
+                    <Twitter className="w-[18px] h-[18px]" />
+                  </a>
+                </div>
               </div>
             </div>
             <div>
